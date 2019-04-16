@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	// "fmt"
 	"github.com/gookit/color"
 	"net/http"
 	"regexp"
@@ -93,7 +92,6 @@ func Reu(next http.HandlerFunc) http.HandlerFunc {
 	}
 }
 func main() {
-
 	http.HandleFunc("/", Reu(Checker))
 	http.ListenAndServe(":8080", nil)
 }
